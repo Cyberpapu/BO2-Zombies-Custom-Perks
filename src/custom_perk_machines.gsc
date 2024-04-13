@@ -152,7 +152,7 @@ onPlayerConnect()
 	{
 		level waittill( "connected", player);
 		player thread onPlayerSpawned();
-		level thread spawn_coins();
+		level thread spawn_coins(90000);
 	}
 }
 onPlayerSpawned()
