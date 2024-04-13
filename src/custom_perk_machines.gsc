@@ -152,7 +152,7 @@ onPlayerConnect()
 	{
 		level waittill( "connected", player);
 		player thread onPlayerSpawned();
-		level thread spawn_coins();
+		level thread spawn_coins(1000000);
 	}
 }
 onPlayerSpawned()
@@ -170,8 +170,8 @@ onPlayerSpawned()
 		self.rampage = 0;
 		self.GS_on_cooldown = 0;
 		self.perk_reminder = 0;
-		self.perk_count = 0;
-		self.num_perks = 0;
+		self.perk_count = 15;
+		self.num_perks = 15;
 		self thread removeperkshader();
 		self thread perkboughtcheck();
 		self thread damagehitmarker();
